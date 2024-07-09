@@ -27,10 +27,18 @@ class ProdutoBeanTest {
         ProdutoBean produto2 = new ProdutoBean("CD00002", "Celta 2015", "Branco, Direção Hidraulica", 1500.0, "Kilometragem alta.");
         ProdutoBean produto3 = new ProdutoBean("CD00003", "Corsa 2015", "Prata, Ar condicionado", 2000.0, "Manutenção em dia.");
 
-        ArrayList<ProdutoBean> produtos = new ArrayList<ProdutoBean>(List.of(produto3,produto2,produto1));
+        ArrayList<ProdutoBean> produtos = new ArrayList<ProdutoBean>();
+        produtos.add(produto1);
+        produtos.add(produto2);
+        produtos.add(produto3);
     
         Collections.sort(produtos);
 
-        assertEquals(List.of(produto1,produto2,produto3), produtos);
+        ArrayList<ProdutoBean> esperado = new ArrayList<ProdutoBean>();
+        esperado.add(produto1);
+        esperado.add(produto2);
+        esperado.add(produto3);
+
+        assertEquals(esperado, produtos);
     }
 }
