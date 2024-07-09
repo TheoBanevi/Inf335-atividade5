@@ -44,7 +44,7 @@ class AnuncianteBeanTest {
         ArrayList<AnuncioBean> anuncios = new ArrayList<>();
         anuncios.add(this.anuncio1);
 
-        assertEquals(anuncios.getFirst(),this.anuncio1);
+        assertEquals(anuncios.get(0),this.anuncio1);
         assertEquals(anuncios.size(),1);
     }
 
@@ -55,13 +55,13 @@ class AnuncianteBeanTest {
         anuncios.add(this.anuncio1);
         anuncios.add(this.anuncio2);
 
-        assertEquals(anuncios.getFirst(),anuncio1);
+        assertEquals(anuncios.get(0),anuncio1);
         assertEquals(anuncios.get(1),anuncio2);
         assertEquals(anuncios.size(),2);
 
         anuncios.remove(anuncio1);
 
-        assertEquals(anuncios.getFirst(),anuncio2);
+        assertEquals(anuncios.get(0),anuncio2);
         assertEquals(anuncios.size(),1);
     }
 
